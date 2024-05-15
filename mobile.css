@@ -1,60 +1,100 @@
 @media screen (max-width: 575px) {
 
 }
-/* *{
+*{
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box; */
+    box-sizing: border-box;
+}
 
-.menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
   header {
-    
+    display: flex;
+   margin: 0;
+   padding: 0;
+   justify-content: space-between;
+   align-items: center;
+   border: solid;
+   border-color: black;
+  }
+  img {
+    min-width: 80px;
+    height: auto;
+  }
+  
+  
+  input { 
+    display: none;
+  }
+  
+  #main-logo {
+    min-width: 80px;
+    height: auto;
   }
   nav {
     display: flex;
-  }
-  .bar {
-    display: flex;
-    flex-direction: row;
-    justify-self: end
-    width: 30px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
+    justify-content:space-between;
   }
   
-  .sliding-menu {
-    position: fixed;
-    top: 200px;
-    width: 30%;
-    height: 100%;
+  #burger-toggle {
+    display: none;
+  }
+  
+  /* Style for burger icon */
+  .burger-icon {
+    margin: 20px;
+    display: block;
+    width: 60px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .burger-icon span {
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #000;
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Position the spans to create the burger icon */
+  .burger-icon span:nth-child(1) {
+    top: 0;
+  }
+  
+  .burger-icon span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .burger-icon span:nth-child(3) {
+    bottom: 0;
+  }
+  
+  /* Style the menu */
+  .menu {
+    position: absolute;
+    top: 10%;
+    right: -100%;
+    width: 200px; 
     background-color: #ababab;
-    animation: left 0.3s ease;
+    padding: 0px;
+    transition: right 0.3s ease;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: solid;
+    border-color: black;
+
+  }
+  ul {
+    margin: 10px;
+    padding-left: 0px;
+  }
+  li {
+    padding: 5px;
   }
   
-  .sliding-menu ul {
-    list-style: none;
-    padding: 0;
+  /* Show the menu when checkbox is checked */
+  #burger-toggle:checked ~ .menu {
+    right: 0;
   }
-  
-  .sliding-menu ul li {
-    padding: 15px 20px;
-  }
-  
-  .sliding-menu ul li a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 18px;
-  }
-  
-  /* Media query for responsive design
-  @media screen and (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    } */
-  
-    
