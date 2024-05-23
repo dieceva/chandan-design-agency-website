@@ -1,0 +1,667 @@
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default body styles */
+body {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    width: 100vmax;
+    height: 100dvh;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 16px;
+    color: rgb(26, 38, 48);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    grid-area: 1 / 1 / span 1 / span 12;
+    height: fit-content;
+}
+
+.navheader {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 1% auto;
+
+
+}
+
+.imglogo {
+    display: flex;
+    box-sizing: border-box;
+    width: 8vmin;
+    height: 8vmin;
+}
+
+
+
+.hamburguer-field {
+    display: flex;
+    box-sizing: border-box;
+    width: 5vmin;
+    height: 5vmin;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HAMBURGUER NAV */
+
+/* Hide the checkbox */
+#burger-toggle {
+    display: none;
+}
+
+/* Style for burger icon */
+.burger-icon {
+    display: block;
+    box-sizing: border-box;
+    width: 3vmin;
+    height: 3vmin;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+/* Position the spans to create the burger icon */
+.burger-icon span:nth-child(1) {
+    top: 0;
+}
+
+.burger-icon span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger-icon span:nth-child(3) {
+    bottom: 0;
+}
+
+/* Style the menu */
+.menu {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    display: none;
+    visibility: hidden;
+    width: 25vmin;
+    /* Adjust width as needed */
+    background-color: #f8f8f8;
+    padding: 3vmin;
+    transition: right 0.3s ease;
+}
+
+/* Show the menu when checkbox is checked */
+#burger-toggle:checked~.menu {
+    right: 0;
+    display: block;
+    visibility: visible;
+}
+
+
+
+/* SECTION 1 - CRAFTING */
+
+#section1-field {
+    grid-area: auto / auto / span 3 / span 12;
+    display: grid;
+    width: 100%;
+    background-color: rgb(233, 244, 255);
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+#section1 {
+
+    display: grid;
+    grid-template-areas:
+
+        "crafting-text-area img-crafting-area"
+        "crafting-button-area img-crafting-area"
+    ;
+    padding: 2% 10%;
+    justify-content: center;
+    grid-template-columns: 60% 30%;
+}
+
+
+
+#crafting-text-id {
+    display: grid;
+    grid-area: crafting-text-area;
+    width: 80%;
+    font-size: 3em;
+    justify-self: start;
+    align-self: flex-end;
+    padding-bottom: 2%;
+}
+
+#lets-talk-button-field {
+    display: grid;
+    justify-self: start;
+    grid-area: crafting-button-area;
+}
+
+#button-lets-talk {
+    width: 25vmin;
+    height: 10vmin;
+    color: #FFFFFF;
+    background-color: #4361EE;
+    border-style: none;
+    border-radius: 8%;
+}
+
+#button-lets-talk p {
+    font-size: 2em;
+}
+
+#crafting-arrow {
+    width: 3%;
+    height: 5%;
+}
+
+#img-woman-crafting-field {
+    display: grid;
+    justify-self: start;
+    grid-area: img-crafting-area;
+}
+
+#img-woman-crafting {
+    width: 55vmin;
+    height: 65vmin;
+
+}
+
+
+
+
+/* SECTION 2 - ELEVATE */
+
+#section2 {
+    grid-area: 5 / 1 / span 3 / span 12;
+    display: grid;
+    gap: 2%;
+    font-size: 1.3em;
+    width: 100vmax;
+    height: auto;
+    padding-top: 2%;
+    background-color: #FFFFFF;
+    grid-template-areas:
+        "header-elevate"
+        "content-elevate"
+    ;
+}
+
+#header-elevate-field {
+    grid-area: header-elevate;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+
+}
+
+#content-elevate-field {
+    grid-area: content-elevate;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2% 4%;
+}
+
+.elevate-text {
+    padding: 2%;
+    text-align: left;
+}
+
+
+/* SECTION 3 - OUR SERVICES */
+
+#section3 {
+    grid-area: 8 / 1 / span 3 / span 12;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(233, 244, 255);
+    font-size: x-large;
+    padding: 20px;
+}
+
+#services-field {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns */
+    grid-template-rows: repeat(2, auto);
+    /* 2 rows */
+    gap: 20px;
+    width: 100%;
+}
+
+.services-box {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: white;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-box p {
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.services-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.services-box button:hover {
+    background-color: #0056b3;
+}
+
+#section3 img {
+    height: 10vmin;
+    width: 10vmin;
+}
+
+#button-request-quote {
+    font-size: 0.8em;
+    width: 25vmin;
+    height: 7vmin;
+    color: white;
+    border-style: none;
+    border-radius: 8%;
+}
+
+#button-lets-talk-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button-lets-talk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6em;
+    width: 25vmin;
+    height: 10vmin;
+    color: #FFFFFF;
+    background-color: #4361EE;
+    border-style: none;
+    border-radius: 8%;
+    margin: 2%;
+    gap: 5%;
+}
+
+#button-lets-talk img {
+    width: 10%;
+    height: 25%;
+}
+
+/* Ensure each services box takes up one grid space */
+#services-box1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#services-box2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#services-box3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+#services-box4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+#services-box5 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#services-box6 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#services-box7 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+#services-box8 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+
+#img-woman-crafting {
+    width: 55vmin;
+    height: 65vmin;
+}
+
+/* SECTION 4 - HAPPY STORIES */
+
+#section4 {
+    grid-area: 11 / 1 / span 3 / span 12;
+    display: grid;
+    gap: 10%;
+    font-size: x-large;
+    width: 100vmax;
+    height: 55vmin;
+    margin: 5% auto;
+    background-color: #FFFFFF;
+    grid-template-areas:
+        "header-happy"
+        "content-happy"
+    ;
+    align-items: center;
+}
+
+#header-happy-field {
+    grid-area: header-happy;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#content-happy-field {
+    grid-area: content-happy;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+
+
+}
+
+#happy-quote-field {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    background-color: rgb(233, 244, 255);
+    margin: auto 2%;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    gap: 5%;
+    border-radius: 5%;
+}
+
+#img-happy-stories {
+    border-radius: 80%;
+}
+
+
+
+#text-happy-stories-field {
+    width: 50%;
+}
+
+.happy-text {
+    font-size: 0.5em;
+}
+
+.happy-arrow {
+    width: 1%;
+    height: 1%;
+}
+
+/* SECTION 5 - CONTACT US */
+
+#section5 {
+    grid-area: 14 / 1 / span 3 / span 12;
+    display: grid;
+    margin-top: 5%;
+    grid-template-areas:
+        "header-contact-area"
+        "content-contact-area"
+        "content-contact-area"
+    ;
+}
+
+.content-icon {
+    float: left;
+}
+
+#header-contact {
+    grid-area: header-contact-area;
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 1.3em;
+
+}
+
+
+#content-contact {
+    display: flex;
+    flex-direction: row;
+    grid-area: content-contact-area;
+    height: 100%;
+    padding: 5%;
+    gap: 25%;
+    background-color: rgb(233, 244, 255);
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-info-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5vmin;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 65vmin;
+    height: 75vmin;
+    padding: 5%;
+    gap: 5%;
+    background-color: #FFFFFF;
+    border-radius: 5%;
+
+}
+
+#contact-form input {
+    width: 90%;
+    border-style: none;
+    border-bottom-style: solid;
+    border-width: 1px;
+
+}
+
+/* SECTION 6 - STAY UPDATED */
+
+#section6 {
+    grid-area: 17 / 1 / span 4 / span 12;
+    display: grid;
+    gap: 10px;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 5%;
+    width: 100vmax;
+    height: 65vmin;
+    background-color: #FFFFFF;
+    grid-template-areas:
+        "header-updated-area"
+        "content-updated-area"
+        "content-updated-area"
+        "button-updated-area"
+    ;
+}
+
+#header-updated-field {
+    grid-area: header-updated-area;
+}
+
+#content-updated-field {
+    grid-area: content-updated-area;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+
+}
+
+.content-updated-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 244, 255);
+    width: auto;
+    height: 50vmin;
+    gap: 4%;
+    font-size: 0.7em;
+    border-radius: 5%;
+}
+
+.content-updated-box p {
+    width: 50vmin;
+    text-align: left;
+    height: auto;
+    margin: auto 5%;
+}
+
+.read-more-button {
+    font-size: large;
+    width: 25vmin;
+    height: 7vmin;
+    color: #4361EE;
+    border-style: none;
+    border-radius: 8%;
+    background-color: rgb(233, 244, 255);
+}
+
+#updated-button {
+    grid-area: button-updated-area;
+    font-size: large;
+    width: 25vmin;
+    height: 7vmin;
+    color: #FFFFFF;
+    background-color: #4361EE;
+    border-style: none;
+    border-radius: 8%;
+
+}
+
+
+/* FOOTER */
+
+#footer-field {
+    display: grid;
+    grid-area: 21 / 1 / span 1 / span 12;
+    margin-top: 5%;
+}
+
+#footer-field a {
+    color: #F5F5F5;
+}
+
+#footer-div {
+    display: grid;
+    grid-area: 21 / 1 / span 4 / span 12;
+    background-color: #03071B;
+    color: #F5F5F5;
+    padding: 2%;
+    grid-template-areas:
+        "footer-logo-area footer-contact-area footer-explore-area footer-subscribe-area"
+        "footer-logo-area footer-contact-area footer-explore-area footer-subscribe-area"
+        "footer-logo-area footer-contact-area footer-explore-area footer-subscribe-area"
+        "footer-copy-area footer-copy-area footer-copy-area footer-copy-area"
+    ;
+}
+
+#footer-logo-field {
+    grid-area: footer-logo-area;
+}
+
+#footer-contact-field {
+    grid-area: footer-contact-area;
+}
+
+#footer-contact-field a {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+}
+
+#footer-explore-field {
+    grid-area: footer-explore-area;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-explore-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-subscribe-field {
+    grid-area: footer-subscribe-area;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#footer-subscribe-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vmin;
+}
+
+#subscribe-button {
+    font-size: large;
+    width: 25vmin;
+    height: 7vmin;
+    color: #FFFFFF;
+    background-color: #4361EE;
+    border-style: none;
+    border-radius: 8%;
+}
+
+#footer-copy-field {
+    grid-area: footer-copy-area;
+    display: flex;
+    justify-self: center;
+    padding: 1%;
+}
